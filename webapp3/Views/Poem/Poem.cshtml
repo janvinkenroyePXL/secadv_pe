@@ -1,0 +1,12 @@
+﻿@model webapp3.ViewModels.PoemViewModel
+
+@{
+    ViewBag.Title = "Poem";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Title</h2>
+
+<p>@Model.Text</p>
+<p>@Model.Year, @Model.Author</p>
+<p>Info: @Model.Info</p>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<webapp2.ViewModels.StudentViewModel>
+
+@{ 
+    ViewBag.Title = "Studenten";
+    Layout = "_Layout";
+}
+
+<h2>Studenten</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Voornaam</th>
+            <th>Naam</th>
+            <th>Klas</th>
+            <th>Team</th>
+        </tr>
+    </thead>
+    @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.Name</td>
+                    <td>@student.Class</td>
+                    <td>@student.Team</td>
+                    <td><a asp-action="Student" asp-route-id="@student.Id">Details</a></td>
+                </tr>
+            }
+</table>
+<a asp-action="Create">Voeg nieuwe student toe</a>

@@ -1,0 +1,27 @@
+﻿@using webapp3.ViewModels
+
+@model StudentViewModel
+
+<h1>Wijzig gegevens student</h1>
+
+<form method="post">
+    <div class="form-group row">
+        <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+        <input asp-for="FirstName" id="FirstName" value=@Model.FirstName />
+    </div>
+    <div class="form-group row">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Name" id="Name" value="@Model.Name" />
+    </div>
+    <div class="form-group row">
+        <label asp-for="Class" class="col-sm-2 col-form-label"></label>
+        <input asp-for="Class" id="Class" value=@Model.Class />
+    </div>
+    <div class="form-group row">
+        <label asp-for="Team" class="col-sm-2 col-form-label"></label>
+        <select asp-for="Team" asp-items="@Html.GetEnumSelectList<Team>()" id="Team">@Model.Team</select>
+    </div>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary" name="save">Opslaan</button>
+    </div>
+</form>

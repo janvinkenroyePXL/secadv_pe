@@ -1,0 +1,14 @@
+﻿@using webapp3.ViewModels
+
+@model StudentViewModel
+
+<h1>Verwijder student</h1>
+
+<form method="post">
+    <div class="form-group row">
+        <p>Ben je zeker dat je student @Model.FirstName @Model.Name wil verwijderen?</p>
+    </div>
+    <div class="form-group row">
+        <button type="submit" class="btn btn-primary" name="save">Student verwijderen</button>
+    </div>
+</form>

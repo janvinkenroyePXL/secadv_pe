@@ -1,0 +1,16 @@
+﻿@model webapp2.ViewModels.StudentViewModel
+
+@{ 
+    ViewBag.Title = "Student";
+    Layout = "_Layout";
+}
+
+<h2>@Model.FirstName @Model.Name</h2>
+
+<p>Voornaam: @Model.FirstName</p>
+<p>Naam: @Model.Name</p>
+<p>Klas: @Model.Class</p>
+<p>Team: @Model.Team</p>
+<p><a asp-action="Edit" asp-route-id=@Model.Id>Wijzig gegevens</a></p>
+<p><a asp-action="Delete" asp-route-id=@Model.Id>Verwijder student</a></p>
+

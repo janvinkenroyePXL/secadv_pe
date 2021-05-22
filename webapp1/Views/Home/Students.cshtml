@@ -1,0 +1,28 @@
+﻿@model IEnumerable<webapp1.ViewModels.StudentViewModel>
+
+@{ 
+    ViewBag.Title = "Studenten";
+    Layout = "_Layout";
+}
+
+<h2>Studenten</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Voornaam</th>
+            <th>Naam</th>
+            <th>Klas</th>
+            <th>Team</th>
+        </tr>
+    </thead>
+    @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.Name</td>
+                    <td>@student.Class</td>
+                    <td>@student.Team</td>
+                </tr>
+            }
+</table>
