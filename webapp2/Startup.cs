@@ -36,8 +36,9 @@ namespace webapp2
             })
             .AddJwtBearer(options =>
             {
-                options.Authority = "https://secadvpe-dev.eu.auth0.com/";
-                options.Audience = "https://localhost:44339";
+                options.Authority = $"https://{Configuration["Auth0:Domain"]}/";
+                options.Audience = $"https://{Configuration["Auth0:Audience"]}/";
+
             })
             .AddCookie()
             .AddOpenIdConnect("Auth0", options =>
